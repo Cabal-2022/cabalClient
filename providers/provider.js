@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import AllData from "./Context";
+import AllData from "./context";
 
 export const Context = createContext("");
 
