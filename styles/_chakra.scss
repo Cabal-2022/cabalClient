@@ -1,0 +1,126 @@
+@use "./var";
+@import "./mixins";
+.chakra-form-control {
+	.chakra-form__label {
+		margin-top: var.$default;
+	}
+
+	.chakra-input__group {
+		.chakra-input__right-element {
+			width: max-content;
+		}
+		.chakra-button {
+			margin: 0;
+		}
+	}
+	.chakra-button {
+		margin-top: var.$default;
+		width: 100%;
+	}
+}
+.chakra-input {
+	border-color: var.$primary-dark !important;
+	border-width: 3px;
+	box-shadow: none !important;
+}
+.chakra-accordion {
+	.chakra-accordion__item {
+		margin: 0.25rem 0.5rem;
+		@include standard-shadow();
+		.chakra-accordion__button {
+			.row {
+				@include row(flex-start, center, nowrap);
+				.chakra-checkbox {
+					margin-right: 0.5re;
+				}
+			}
+		}
+		.chakra-accordion__icon {
+			margin-left: auto;
+		}
+	}
+}
+.chakra-popover {
+	background-color: var.$fg;
+	@include standard-shadow();
+	z-index: 9999999;
+}
+.tag-container {
+	padding: 0.5rem 0;
+}
+.chakra-tag {
+	margin: 2px;
+	> * {
+		padding: 5px;
+	}
+	@include row(flex-start, center, nowrap);
+	button {
+		margin-left: 0.25rem;
+		@include column(center, center, nowrap);
+	}
+}
+.chakra-modal__close-btn {
+	box-shadow: none !important;
+	outline: none !important;
+}
+// POPOVER
+.custom-popover,
+.custom-modal {
+	outline: none !important;
+	box-shadow: none !important;
+
+	// @include standard-shadow();
+	background-color: var.$fg !important;
+	color: var.$text;
+	.chakra-modal__body {
+		color: var.$text;
+	}
+	.chakra-modal__close-btn {
+		color: var.$text-secondary;
+		&:hover {
+			color: var.$text;
+		}
+	}
+}
+.popover-arrow {
+	background: var.$fg !important;
+}
+.custom-popover-body {
+	background-color: var.$fg !important;
+}
+.chakra-tabs__tab {
+	outline: none !important;
+	box-shadow: none !important;
+}
+.custom-modal {
+	.chakra-modal__body {
+		&::-webkit-scrollbar {
+			width: 20px;
+			height: 100%;
+		}
+		&::webkit-scrollbar-track {
+			box-shadow: inset 0 0 10px 10px var.$border;
+			border: solid 3px transparent;
+		}
+		&::-webkit-scrollbar-thumb {
+			box-shadow: inset 0 0 10px 10px var.$primary;
+			border: solid 3px transparent;
+		}
+	}
+}
+.custom-switch {
+	&.checked {
+		.chakra-switch__track {
+			background-color: var.$primary;
+			color: var.$primary;
+		}
+	}
+	&.unchecked {
+		.chakra-switch__track {
+			background-color: var.$accent;
+			color: var.$accent;
+		}
+	}
+}
+.chakra-switch {
+}

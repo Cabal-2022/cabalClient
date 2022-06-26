@@ -1,0 +1,80 @@
+@use "./var";
+@import "./mixins";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+	padding: 0;
+	margin: 0;
+	color: var.$text !important;
+	&.secondary {
+		color: var.$text-secondary;
+	}
+	&.link {
+		color: var.$link;
+	}
+	&.link:hover {
+		text-decoration: underline;
+		button {
+			text-decoration: underline;
+		}
+	}
+	&.center {
+		text-align: center;
+	}
+	&.left {
+		text-align: left;
+	}
+	&.right {
+		text-align: right;
+	}
+	&.primary {
+		color: var.$primary;
+	}
+	&.no-wrap {
+		white-space: nowrap;
+	}
+	&.subtle {
+		opacity: 0.5;
+	}
+}
+h1 {
+	// @include text(var.$font-title, 3.5rem, 800);
+	font-family: var.$font-title;
+	font-size: 3.5rem !important;
+	font-weight: 800 !important;
+}
+h2 {
+	font-family: var.$font-title !important;
+	font-size: 2.75rem !important;
+	font-weight: 700 !important;
+}
+h3 {
+	font-family: var.$font-title !important;
+	font-size: 2.5rem !important;
+	font-weight: 700 !important;
+}
+h4 {
+	font-family: var.$font-title !important;
+	font-size: 1.75rem !important;
+	font-weight: 600 !important;
+}
+h5 {
+	font-family: var.$font-title !important;
+	font-size: 1.5rem !important;
+	font-weight: 500 !important;
+}
+h6 {
+	font-family: var.$font-title !important;
+	font-size: 1.15rem !important;
+	font-weight: 500 !important;
+}
+h1#rk_profile_title,
+h1#rk_chain_modal_title,
+h1#rk_connect_title {
+	font-size: 1.5rem !important;
+}

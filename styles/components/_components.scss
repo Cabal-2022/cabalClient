@@ -1,0 +1,16 @@
+@use "../var";
+.status {
+	height: 1.5ch;
+	width: 1.5ch;
+	border-radius: 50%;
+	&.success {
+		background-color: var.$success;
+	}
+	&.failure {
+		background-color: var.$danger;
+	}
+	&.todo {
+		background-color: transparent;
+		border: 2px solid var.$border;
+	}
+}

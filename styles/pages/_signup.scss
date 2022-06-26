@@ -1,0 +1,49 @@
+@use "../var";
+
+.sign-up {
+	scroll-behavior: smooth !important;
+
+	overflow: auto;
+	height: 100%;
+	section {
+		padding: 1rem 2rem;
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		height: 100%;
+		.header {
+			grid-row: 1/2;
+		}
+		.content {
+			grid-row: 2/3;
+		}
+		.footer {
+			grid-row: 3/4;
+
+			&.center {
+				@include column(center, center, nowrap);
+			}
+			.content {
+				width: max-content;
+				.chakra-button {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.sign-up {
+	.welcome {
+		.content {
+			.img-holder {
+				margin: auto 1rem;
+				float: right;
+				height: 30rem;
+				width: 30rem;
+				background-color: var.$primary-dark;
+			}
+		}
+	}
+	.question {
+		// background-color: pink;
+	}
+}
