@@ -11,7 +11,6 @@ import {
 	Tooltip,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { Spinner } from "@uiball/loaders";
 import LoadingWrapper from "../helper/loadingWrapper";
 export default function ProfileInfoButton({ item, idx }) {
 	const [visible, setVisible] = useState(false);

@@ -4,7 +4,7 @@ import React from "react";
 // Libraries
 import { DotSpinner, RaceBy, Ripples, Waveform } from "@uiball/loaders";
 
-export default function LoadingWrapper({ loading, children, type, size }) {
+export default function Loading({ loading, children, type, size }) {
 	const loadColor = "#3da9fc";
 	if (loading) {
 		return (
